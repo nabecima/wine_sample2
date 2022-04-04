@@ -1,0 +1,29 @@
+@use "../global" as g;
+
+.c-btn {
+  display: block;
+  margin: 15px auto 0;
+  width: 70%;
+  cursor: pointer;
+  animation: pulse 1.8s ease infinite;
+
+  @include g.mq() {
+    @include g.mt_vw(15);
+  }
+
+  @include g.mq(sm) {
+    @include g.mt_vw(15, 600);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: sacle(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

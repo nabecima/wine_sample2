@@ -1,0 +1,196 @@
+@use "../global" as g;
+
+.p-article {
+  padding-top: 50px;
+  h1,
+  h2,
+  p {
+    padding: 3px 2px;
+  }
+
+  h1,
+  h2 {
+    font-weight: 600;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    line-height: 2;
+
+    span {
+      padding: 10px 0;
+      background-color: g.$highlight;
+    }
+
+    + p {
+      margin-bottom: 30px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 18px;
+    font-size: 2.7rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  picture {
+    margin-bottom: 5px;
+  }
+
+  &__intro {
+    margin-bottom: 40px;
+
+    picture {
+      margin-bottom: 30px;
+    }
+
+    div {
+      &:first-of-type {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  section {
+    // &:first-of-type {
+    margin-bottom: 40px;
+
+    div {
+      margin-bottom: 30px;
+
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 5px;
+
+        &:last-of-type {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    // }
+
+    // &:nth-of-type(2) {
+    //   margin-bottom: 40px;
+
+    //   div {
+    //     margin-bottom: 30px;
+
+    //     p {
+    //       margin-bottom: 10px;
+    //     }
+    //   }
+    // }
+  }
+
+  @include g.mq() {
+    h1 {
+      @include g.mb_vw(10);
+      @include g.fs_vw(30);
+
+      span {
+        @include g.py_vw(10, 10);
+      }
+
+      + p {
+        @include g.mb_vw(30);
+      }
+    }
+
+    h2 {
+      @include g.mb_vw(18);
+      @include g.fs_vw(27);
+    }
+
+    &__intro {
+      @include g.mb_vw(40);
+
+      picture {
+        @include g.mb_vw(30);
+      }
+
+      div {
+        &:first-of-type {
+          @include g.mb_vw(15);
+        }
+      }
+    }
+
+    section {
+      @include g.mb_vw(40);
+
+      div {
+        @include g.mb_vw(30);
+
+        &:last-of-type {
+          @include g.mb_vw(15);
+        }
+
+        p {
+          @include g.mb_vw(10);
+        }
+      }
+    }
+  }
+
+  @include g.mq(sm) {
+    h1 {
+      @include g.mb_vw(10, 600);
+      @include g.fs_vw(37, 600);
+
+      span {
+        @include g.py_vw(10, 10, 600);
+      }
+
+      + p {
+        @include g.mb_vw(30, 600);
+      }
+    }
+
+    h2 {
+      @include g.mb_vw(18, 600);
+      @include g.fs_vw(34, 600);
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    &__intro {
+      @include g.mb_vw(40, 600);
+
+      picture {
+        @include g.mb_vw(30, 600);
+      }
+
+      div {
+        &:first-of-type {
+          @include g.mb_vw(15, 600);
+        }
+      }
+    }
+
+    section {
+      @include g.mb_vw(40, 600);
+
+      div {
+        @include g.mb_vw(30, 600);
+
+        &:last-of-type {
+          @include g.mb_vw(15, 600);
+        }
+
+        p {
+          @include g.mb_vw(10, 600);
+        }
+      }
+    }
+  }
+}

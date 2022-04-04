@@ -1,0 +1,10 @@
+@use "../global" as g;
+
+.u-container {
+  margin: 0 auto;
+  max-width: 708px;
+
+  @include g.mq() {
+    @include g.px_vw(15, 15);
+  }
+}

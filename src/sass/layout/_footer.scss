@@ -1,0 +1,34 @@
+@use "../global" as g;
+.l-footer {
+  padding: 40px 0;
+  color: #fff;
+  background-color: g.$footer_bg;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 380px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: 381px) {
+    &__links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use "../global" as g;
+.u-highlight {
+  font-weight: 600;
+  background: linear-gradient(transparent 60%, g.$highlight 60%);
+}

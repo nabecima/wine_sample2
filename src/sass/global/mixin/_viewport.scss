@@ -1,0 +1,33 @@
+@function get_vw($size, $viewport: 750) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fs_vw($size, $viewport: 750) {
+  font-size: $size * 1px;
+  font-size: get_vw($size, $viewport);
+}
+
+@mixin px_vw($l, $r, $viewport: 750) {
+  padding-left: $l * 1px;
+  padding-left: get_vw($l, $viewport);
+  padding-right: $l * 1px;
+  padding-right: get_vw($r, $viewport);
+}
+
+@mixin py_vw($l, $r, $viewport: 750) {
+  padding-top: $l * 1px;
+  padding-top: get_vw($l, $viewport);
+  padding-bottom: $l * 1px;
+  padding-bottom: get_vw($r, $viewport);
+}
+
+@mixin mb_vw($size, $viewport: 750) {
+  margin-bottom: $size * 1px;
+  margin-bottom: get_vw($size, $viewport);
+}
+
+@mixin mt_vw($size, $viewport: 750) {
+  margin-top: $size * 1px;
+  margin-top: get_vw($size, $viewport);
+}
