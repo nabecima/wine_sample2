@@ -26,5 +26,16 @@
     }
   }
   @include g.mq(sm) {
+    &--1 {
+      @include g.mb_vw(28, 600);
+    }
+
+    &--2 {
+      @include g.mb_vw(56, 600);
+    }
+
+    &--3 {
+      @include g.mb_vw(84, 600);
+    }
   }
 }
