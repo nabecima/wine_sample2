@@ -32,6 +32,12 @@
     line-height: 1.5;
   }
 
+  &__intro {
+    p:first-of-type {
+      font-size: 1.3rem;
+    }
+  }
+
   @include g.mq() {
     h1 {
       @include g.fs_vw(30);
@@ -44,36 +50,6 @@
     h2 {
       @include g.fs_vw(27);
     }
-
-    // &__intro {
-    //   @include g.mb_vw(40);
-
-    //   picture {
-    //     @include g.mb_vw(30);
-    //   }
-
-    //   div {
-    //     &:first-of-type {
-    //       @include g.mb_vw(15);
-    //     }
-    //   }
-    // }
-
-    // section {
-    //   @include g.mb_vw(40);
-
-    //   div {
-    //     @include g.mb_vw(30);
-
-    //     &:last-of-type {
-    //       @include g.mb_vw(15);
-    //     }
-
-    //     p {
-    //       @include g.mb_vw(10);
-    //     }
-    //   }
-    // }
   }
 
   @include g.mq(sm) {
@@ -90,38 +66,13 @@
     }
 
     p {
-      // font-size: 1.4rem;
       @include g.fs_vw(28, 600);
     }
 
-    // &__intro {
-    //   @include g.mb_vw(40, 600);
-
-    //   picture {
-    //     @include g.mb_vw(30, 600);
-    //   }
-
-    //   div {
-    //     &:first-of-type {
-    //       @include g.mb_vw(15, 600);
-    //     }
-    //   }
-    // }
-
-    // section {
-    //   @include g.mb_vw(40, 600);
-
-    //   div {
-    //     @include g.mb_vw(30, 600);
-
-    //     &:last-of-type {
-    //       @include g.mb_vw(15, 600);
-    //     }
-
-    //     p {
-    //       @include g.mb_vw(10, 600);
-    //     }
-    //   }
-    // }
+    &__intro {
+      p:first-of-type {
+        @include g.fs_vw(20, 600);
+      }
+    }
   }
 }
