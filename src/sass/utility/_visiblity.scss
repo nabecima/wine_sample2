@@ -1,0 +1,7 @@
+@use "../global" as g;
+.u-sm-block {
+  display: none;
+  @include g.mq(sm) {
+    display: block;
+  }
+}
